@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -mindepth 1 -maxdepth 1 -type d -exec sh -c '(echo "{}" && find "{}" -type d) | wc -l' \; | awk '{ sum += $1 } END { print sum }'
+find , -type d ! -path . | wc -l
